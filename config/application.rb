@@ -33,6 +33,8 @@ module Footup
     config.generators do |g|
       g.orm             :active_record
       g.template_engine :erb
+    end
     config.active_record.raise_in_transactional_callbacks = true
+
   end
 end
