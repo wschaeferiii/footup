@@ -1,4 +1,5 @@
 class Game < ActiveRecord::Base
+
   validates :title, presence: true
   validates :location, presence: true
   validates :date, presence: true

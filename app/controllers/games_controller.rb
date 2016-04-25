@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy, :toggle_joined]
+  before_action :authenticate_user!
 
   # GET /games
   # GET /games.json
