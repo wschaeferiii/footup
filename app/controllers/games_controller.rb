@@ -11,6 +11,7 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
+    @game = Game.find(params[:id])
   end
 
   # GET /games/new
@@ -63,16 +64,21 @@ class GamesController < ApplicationController
   end
 
   def toggle_joined
-  @game.joined = !@game.joined
-  respond_to do |format|
-    if @game.save
-      format.html { redirect_to games_path }
-      format.json { render :show, status: :ok, location: @game }
+    @game = Game.find(params[:id])
+    if (@game.users.any? { |user| user.id == current_user.id })
+      @game.users.delete(current_user)
     else
-      # show some error message
+      @game.users << current_user
+    end
+    respond_to do |format|
+      if @game.save
+        format.html { redirect_to games_path }
+        format.json { render :show, status: :ok, location: @game }
+      else
+        # show some error message
+      end
     end
   end
-end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -29,4 +29,10 @@
   <dt>Created:</dt>
   <dd><%= @game.created_at %></dd>
 
+  <dt>Joined Users:</dt>
+  <dd><% @game.users.each do |user| %>
+    <%= user.email %>
+    <%end%>
+  </dd>
+
 </dl>
