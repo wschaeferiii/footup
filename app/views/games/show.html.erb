@@ -17,9 +17,6 @@
   <dt>Location:</dt>
   <dd><%= @game.location %></dd>
 
-  <dt>Joined:</dt>
-  <dd><%= @game.joined %></dd>
-
   <dt>Date:</dt>
   <dd><%= @game.date %></dd>
 
@@ -30,9 +27,9 @@
   <dd><%= @game.created_at %></dd>
 
   <dt>Joined Users:</dt>
-  <dd><% @game.users.each do |user| %>
-    <%= user.email %>
+    <% @game.users.each do |user| %>
+    <dd><%= user.email %></dd>
     <%end%>
-  </dd>
+
 
 </dl>

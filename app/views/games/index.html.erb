@@ -12,9 +12,9 @@
       <tr>
         <th>Title</th>
         <th>Location</th>
-        <th>Joined</th>
         <th>Date</th>
         <th>Time</th>
+        <th>Joined</th>
         <th>Game Details</th>
         <th>Edit Games</th>
         <th>Delete Games</th>
@@ -25,16 +25,17 @@
       <%= content_tag_for(:tr, @games) do |game| %>
         <td><%= game.title %></td>
         <td><%= game.location %></td>
-        <td>
-        <%= link_to("/games/#{game.id}/toggle_joined") do %>
-          <% if game.users.any? { |user| user.id == current_user.id } %>
-            <span class="glyphicon glyphicon-ok"></span>
-          <% else %>
-            <span class="glyphicon glyphicon-unchecked"></span>
-          <% end %>
-      <% end %>
         <td><%= game.date %></td>
         <td><%= game.time %></td>
+        <td>
+          <%= link_to("/games/#{game.id}/toggle_joined") do %>
+            <% if game.users.any? { |user| user.id == current_user.id } %>
+              <span class="glyphicon glyphicon-ok"></span>
+            <% else %>
+              <span class="glyphicon glyphicon-unchecked"></span>
+            <% end %>
+          <% end %>
+        </td>
         <td><%= link_to 'View', game %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Delete', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
