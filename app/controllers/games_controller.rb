@@ -27,7 +27,7 @@ class GamesController < ApplicationController
   # POST /games.json
   def create
     @game = Game.new(game_params)
-
+    @game.owner = current_user.email
     respond_to do |format|
       if @game.save
         format.html { redirect_to games_path, notice: 'Game was successfully created.' }
