@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
   resources :games
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about', via: 'get'
   match 'games/:id/toggle_joined', to: 'games#toggle_joined', via: 'get'
+  devise_for :users, controllers: { registrations: "registrations" }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
