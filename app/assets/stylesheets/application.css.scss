@@ -3,9 +3,22 @@
 @import "bootstrap-custom-variables.scss";
 @import "bootstrap-sprockets.scss";
 @import "bootstrap.scss";
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,800);
+
+$font: 'Dosis', sans-serif;
+
+* {
+  font-family: $font;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
 
 body {
   padding-top: $navbar-height + 10px;
+  font-size: 18px;
 }
 
 .page-header {
@@ -26,7 +39,7 @@ input[type="radio"], input[type="checkbox"] {
 
 main {
   margin: 20px auto;
-  width: 800px;
+  width: 1000px;
 }
 
 .todos {
