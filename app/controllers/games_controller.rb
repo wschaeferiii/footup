@@ -5,7 +5,7 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
+    @games = Game.all.order(created_at: :desc)
   end
 
   # GET /games/1
@@ -27,7 +27,7 @@ class GamesController < ApplicationController
   # POST /games.json
   def create
     @game = Game.new(game_params)
-    @game.owner = current_user.email
+    @game.owner = current_user.name
     respond_to do |format|
       if @game.save
         format.html { redirect_to games_path, notice: 'Game was successfully created.' }

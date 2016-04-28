@@ -3,9 +3,11 @@
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
   <% end %>
-  <%= link_to edit_game_path(@game), class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-pencil"></span>
-    Edit
+  <% if @game.owner == current_user.name %>
+    <%= link_to edit_game_path(@game), class: 'btn btn-primary' do %>
+      <span class="glyphicon glyphicon-pencil"></span>
+      Edit
+    <% end %>
   <% end %>
   <h1>Show game</h1>
 </div>
@@ -31,8 +33,8 @@
 
   <dt>Joined Users:</dt>
     <% @game.users.each do |user| %>
-      <dd><%= user.email %></dd>
+      <dd><%= user.name %></dd>
+      <dd><%= user.age %></dd>
+      <dd><%= user.gender %></dd>
     <%end%>
-
-
 </dl>
