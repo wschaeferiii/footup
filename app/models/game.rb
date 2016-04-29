@@ -7,7 +7,6 @@ class Game < ActiveRecord::Base
   validates :title, presence: true
   validates :location, presence: true
   validates :address, presence: true
-  validates :user_id, presence: true
   validates :date, presence: true
   validates :time, presence: true
 
