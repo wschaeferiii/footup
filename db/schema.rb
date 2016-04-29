@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428164611) do
+ActiveRecord::Schema.define(version: 20160428212514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20160428164611) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "owner"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "games_users", id: false, force: :cascade do |t|

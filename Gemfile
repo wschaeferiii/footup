@@ -29,6 +29,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
 
+gem 'geocoder'
+
+gem 'gmaps4rails'
+
 gem 'rails_12factor', group: :production
 
 # Use Unicorn as the app server
