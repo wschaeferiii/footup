@@ -12,6 +12,10 @@ class GamesController < ApplicationController
   # GET /games/1.json
   def show
     @game = Game.find(params[:id])
+    @hash = Gmaps4rails.build_markers(@game) do |game, marker|
+      marker.lat game.latitude
+      marker.lng game.longitude
+    end
   end
 
   # GET /games/new
