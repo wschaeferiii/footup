@@ -1,5 +1,5 @@
 =FootUp
-**The easy way to create and join pickup soccer games**
+==The easy way to create and join pickup soccer games**
 
 ==Inspiration
 I love to play soccer.  And one of the huge benefits of soccer is that you can play for fun just about anywhere with both men and women.  However, there are challenges in finding players and places to play.  That's where FootUp comes in.
@@ -25,26 +25,26 @@ I love to play soccer.  And one of the huge benefits of soccer is that you can p
 ==Wireframes
 Here are 7 wireframes for FootUp intended for use on a mobile phone. They are quite detailed, have a lot of wishful features, and many are not included on the app.  They may be added in the future!
 ====Registration
-![wirefram4](http://i.imgur.com/jrW73JS.png)
+http://i.imgur.com/jrW73JS.png
 ====Profile Setup
-![wireframe3](http://i.imgur.com/AkoMFU3.png)
+http://i.imgur.com/AkoMFU3.png
 ====Game Feed
-![wireframe6](http://i.imgur.com/SdgNIbU.png)
+http://i.imgur.com/SdgNIbU.png
 ====Create Game
-![wireframe7](http://i.imgur.com/ETTZJaP.png)
+http://i.imgur.com/ETTZJaP.png
 ====Create Game by Location
-![wireframe1](http://i.imgur.com/43D3siC.png)
+http://i.imgur.com/43D3siC.png
 ====Game Details
-![wireframe5](http://i.imgur.com/wAfdPpx.png)
+http://i.imgur.com/wAfdPpx.png
 ====Public Profile Pages
-![wireframe4](http://i.imgur.com/by8Nbpe.png)
+http://i.imgur.com/by8Nbpe.png
 ====Invitations
-![wireframe2](http://i.imgur.com/oGlrksR.png)
+http://i.imgur.com/oGlrksR.png
 
 ==ERD Diagram / Model Associations
 In this project I only had two models with a `has_and_belongs_to_many` or a many-to-many
 relationship.
-![erd_diagram](http://i.imgur.com/ZwDlsIy.png)
+http://i.imgur.com/ZwDlsIy.png
 
 ==Future Features
 Many future features are included in the wireframes, but next few would be:
